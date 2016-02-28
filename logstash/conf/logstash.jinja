@@ -1,0 +1,26 @@
+input {
+{%- for name, values in input.iteritems()  %}
+    {{ name }} {
+        {%- for v_name, v in values.iteritems() %}
+            {%- if v is iterable and v is not string %}
+                {{ v_name }} => {{ v }}
+            {%- else %}
+                {{ v_name }} => "{{ v }}"
+            {%- endif %}
+        {%- endfor %}
+    }
+{% endfor %}
+}
+output {
+{%- for name, values in output.iteritems()  %}
+    {{ name }} {
+        {%- for v_name, v in values.iteritems() %}
+            {%- if v is iterable and v is not string %}
+                {{ v_name }} => {{ v }}
+            {%- else %}
+                {{ v_name }} => "{{ v }}"
+            {%- endif %}
+        {%- endfor %}
+    }
+{% endfor %}
+}

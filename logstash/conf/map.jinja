@@ -1,0 +1,8 @@
+{% import_yaml "logstash/conf/defaults.yaml" as defaults %}
+
+{# Update settings defaults from pillar data #}
+{% set logstash_settings = salt['pillar.get'](
+    'logstash',
+    default=defaults.logstash,
+    merge=True)
+%}
