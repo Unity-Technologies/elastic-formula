@@ -23,4 +23,14 @@ Install the ``elasticsearch`` package and enable the service.
 ``elasticsearch.config``
 -----------
 
-Configure the elasticseach service
+Configure the ``elasticseach`` service
+
+``kibana``
+-------
+
+Install the ``kibana`` package and enable the service.
+
+``kibana.config``
+-----------
+
+Configure the ``kibana`` service

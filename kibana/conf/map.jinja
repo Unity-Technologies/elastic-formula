@@ -1,0 +1,8 @@
+{% import_yaml "kibana/conf/defaults.yaml" as defaults %}
+
+{# Update settings defaults from pillar data #}
+{% set kibana_settings = salt['pillar.get'](
+    'kibana',
+    default=defaults.kibana,
+    merge=True)
+%}

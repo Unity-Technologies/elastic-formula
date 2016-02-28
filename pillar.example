@@ -5,3 +5,9 @@ elasticsearch:
   cluster_name: elasticsearch
   log_path: /var/log/elasticsearch
   data_path: /var/lib/elasticsearch
+
+kibana:
+  version: 4.4.1
+  bind: 0.0.0.0
+  port: 5601
+  elastic_url: http://localhost:9200
