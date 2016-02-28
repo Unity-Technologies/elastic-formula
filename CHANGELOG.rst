@@ -1,4 +1,4 @@
-foo formula
+elastic formula
 ===========
 0.0.2 (2016-02-28)
 

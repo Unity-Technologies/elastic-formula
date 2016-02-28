@@ -2,7 +2,7 @@
 
 base:
   pkgrepo.managed:
-    - humanname: Logstash PPA
+    - humanname: Elasticsearch PPA
     - name: deb http://packages.elastic.co/elasticsearch/2.x/debian stable main
     - dist: stable
     - file: /etc/apt/sources.list.d/elasticsearch-2.x.list
