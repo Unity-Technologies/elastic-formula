@@ -1,0 +1,8 @@
+{% import_yaml "elasticsearch/conf/defaults.yaml" as defaults %}
+
+{# Update settings defaults from pillar data #}
+{% set elasticsearch_settings = salt['pillar.get'](
+    'elasticsearch',
+    default=defaults.elasticsearch,
+    merge=True)
+%}
