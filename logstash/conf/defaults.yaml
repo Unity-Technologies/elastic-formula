@@ -1,3 +1,4 @@
 logstash:
   version: 5.4.0
   url: https://artifacts.elastic.co/downloads/logstash/
+  ppa_url: http://ppa.launchpad.net/openjdk-r/ppa/ubuntu
