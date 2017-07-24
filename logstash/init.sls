@@ -1,17 +1,12 @@
 {% from "logstash/conf/map.jinja" import logstash_settings with context %}
 
-python-software-properties:
-  pkg.installed
-
-oracle-ppa:
+openjdk-repo:
   pkgrepo.managed:
-    - humanname: OpenJDK PPA repository
-    - ppa: openjdk-r/ppa
+    - humanname: Logstash PPA
+    - name: deb {{ logstash_settings.ppa_url }} {{ grains.oscodename }} main
     - file: /etc/apt/sources.list.d/openjdk.list
     - keyid: 86F44E2A
     - keyserver: keyserver.ubuntu.com
-    - require:
-      - pkg: python-software-properties
     - require_in:
       - pkg: openjdk-8-jdk
 
